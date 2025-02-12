@@ -15,7 +15,5 @@
         max_lines = 2;
       };
     };
-    rainbow-delimiters.enable = true;
   };
 }
-
