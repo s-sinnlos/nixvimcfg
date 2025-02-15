@@ -60,37 +60,62 @@
 
     # Keymaps
     keymaps = {
+      extra = [
+        {
+          key = "gd";
+          mode = "n";
+          action = "<CMD>FzfLua lsp_definitions<CR>";
+          options.desc = "[LSP] Go to definition";
+        }
+        {
+          key = "gi";
+          mode = "n";
+          action = "<CMD>FzfLua lsp_implementations<CR>";
+          options.desc = "[LSP] List all implementations";
+        }
+        {
+          key = "gr";
+          mode = "n";
+          action = "<CMD>FzfLua lsp_references<CR>";
+          options.desc = "[LSP] List all references";
+        }
+        {
+          key = "gs";
+          mode = "n";
+          action = "<CMD>FzfLua lsp_document_symbols<CR>";
+          options.desc = "[LSP] List al symbols in document";
+        }
+        {
+          key = "gS";
+          mode = "n";
+          action = "<CMD>FzfLua lsp_workspace_symbols<CR>";
+          options.desc = "[LSP] List al symbols im workspace";
+        }
+        {
+          key = "ld";
+          mode = "n";
+          action = "<CMD>FzfLua lsp_document_diagnostics<CR>";
+          options.desc = "[LSP] Show diagnostics";
+        }
+      ];
+
       lspBuf = {
         "K" = {
           mode = "n";
           action = "hover";
           desc = "[LSP] Show hover information";
         };
-        "gd" = {
-          mode = "n";
-          action = "definition";
-          desc = "[LSP] Go to definition";
-        };
         "gD" = {
           mode = "n";
           action = "declaration";
           desc = "[LSP] Go to declaration";
-        };
-        "gi" = {
-          mode = "n";
-          action = "implementation";
-          desc = "[LSP] List all implementations";
         };
         "gt" = {
           mode = "n";
           action = "type_definition";
           desc = "[LSP] Go to type definition";
         };
-        "gr" = {
-          mode = "n";
-          action = "references";
-          desc = "[LSP] List all references";
-        };
+
         "<C-k>" = {
           mode = "n";
           action = "signature_help";
