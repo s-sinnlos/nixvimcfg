@@ -3,7 +3,20 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+        devshell.follows = "";
+        flake-compat.follows = "";
+        git-hooks.follows = "";
+        home-manager.follows = "";
+        nix-darwin.follows = "";
+        treefmt-nix.follows = "";
+        nuschtosSearch.follows = "";
+      };
+    };
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
