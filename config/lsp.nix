@@ -56,6 +56,7 @@
       };
       ruff.enable = true; # Python
       yamlls.enable = true; # YAML
+      taplo.enable = true; # toml
     };
 
     # Keymaps
