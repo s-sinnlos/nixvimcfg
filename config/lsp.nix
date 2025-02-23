@@ -98,6 +98,13 @@
           action = "<CMD>FzfLua lsp_document_diagnostics<CR>";
           options.desc = "[LSP] Show diagnostics";
         }
+        {
+          key = "ca";
+          mode = "n";
+          action = "<CMD>FzfLua lsp_code_actions<CR>";
+          options.desc = "[LSP] Select code action";
+        }
+
       ];
 
       lspBuf = {
@@ -127,10 +134,6 @@
           action = "rename";
           desc = "[LSP] Rename all refences";
         };
-        #"ca" = {
-        #  action = "range_code_action";
-        #  desc = "[LSP] Select code action";
-        #};
       };
 
       diagnostic = {
