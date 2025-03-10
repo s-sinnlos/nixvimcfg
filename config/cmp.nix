@@ -21,9 +21,9 @@
         };
         mapping = {
           # Select the [n]ext item
-          "<C-n>" = "cmp.mapping.select_next_item()";
+          "<C-j>" = "cmp.mapping.select_next_item()";
           # Select the [p]revious item
-          "<C-p>" = "cmp.mapping.select_prev_item()";
+          "<C-k>" = "cmp.mapping.select_prev_item()";
           # Scroll the documentation window [b]ack / [f]orward
           "<C-b>" = "cmp.mapping.scroll_docs(-4)";
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
@@ -32,9 +32,11 @@
           #  This will expand snippets if the LSP sent a snippet.
           "<C-y>" = "cmp.mapping.confirm { select = true }";
           # Traditional completion keymaps,
+          "<Tab>" = "cmp.mapping.confirm { select = true }";
           "<CR>" = "cmp.mapping.confirm { select = true }";
-          "<Tab>" = "cmp.mapping.select_next_item()";
+          "<Down>" = "cmp.mapping.select_next_item()";
           "<S-Tab>" = "cmp.mapping.select_prev_item()";
+          "<Up>" = "cmp.mapping.select_prev_item()";
           "<ESC>" = "cmp.mapping.abort()";
 
           # Manually trigger a completion from nvim-cmp.
