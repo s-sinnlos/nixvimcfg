@@ -4,7 +4,7 @@
   plugins.conform-nvim = {
     enable = true;
     settings = {
-      notify_on_error = false;
+      notify_on_error = true;
       formatters_by_ft = {
         lua = [ "stylua" ];
         python = [
@@ -12,9 +12,9 @@
           "ruff_organize_imports"
         ];
         nix = [ "nixfmt" ];
-        bash = [
+        sh = [
           "shellcheck"
-          "shellcheck"
+          "shellharden"
           "shfmt"
         ];
         json = [ "jq" ];
@@ -32,7 +32,10 @@
         };
         shfmt = {
           command = lib.getExe pkgs.shfmt;
-          prepend_args = "{ \"-i\", \"2\" }";
+          prepend_args = [
+            "-i"
+            "2"
+          ];
         };
         shellharden.command = lib.getExe pkgs.shellharden;
         squeeze_blanks.command = lib.getExe' pkgs.coreutils "cat";
