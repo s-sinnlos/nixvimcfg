@@ -4,6 +4,7 @@
     cmp-nvim-lsp.enable = true;
     cmp-path.enable = true;
     cmp-buffer.enable = true;
+    trouble.enable = true;
 
     cmp = {
       enable = true;
