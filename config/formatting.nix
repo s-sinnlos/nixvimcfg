@@ -40,7 +40,7 @@
         shellharden.command = lib.getExe pkgs.shellharden;
         squeeze_blanks.command = lib.getExe' pkgs.coreutils "cat";
         stylua.command = lib.getExe pkgs.stylua;
-        nixfmt.command = lib.getExe pkgs.nixfmt-rfc-style;
+        nixfmt.command = lib.getExe pkgs.nixfmt;
         ruff_format.command = lib.getExe pkgs.ruff;
         ruff_organize_imports.command = lib.getExe pkgs.ruff;
         jq.command = lib.getExe pkgs.jq;
