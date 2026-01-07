@@ -57,6 +57,7 @@
       ruff.enable = true; # Python
       yamlls.enable = true; # YAML
       taplo.enable = true; # toml
+      tofu_ls.enable = true; # terraform, opentofu
     };
 
     # Keymaps
